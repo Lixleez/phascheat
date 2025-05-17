@@ -10,7 +10,7 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden;
+      overflow: hidden; /* Prevent scroll on body */
     }
     iframe {
       position: fixed;
@@ -19,6 +19,11 @@
       width: 100%;
       height: 100%;
       border: none;
+      overflow: hidden; /* Prevent scroll inside iframe container */
+      scrollbar-width: none; /* Firefox */
+    }
+    iframe::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Edge */
     }
   </style>
 </head>
